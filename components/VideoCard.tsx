@@ -6,7 +6,7 @@ import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 import { BsPlay, BsFillPlayFill, BsFillPauseFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 
-import { Video } from './../types';
+import { Video } from '../types';
 
 interface IProps {
   post: Video;
@@ -40,7 +40,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                   height={62}
                   className="rounded-full"
                   src={post.postedBy.image}
-                  alt="Profil Photo"
+                  alt="Profile Photo"
                   layout="responsive"
                 />
               </>
