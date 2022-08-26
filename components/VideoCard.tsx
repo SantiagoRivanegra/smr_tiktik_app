@@ -20,10 +20,10 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 
   const onVideoPress = () => {
     if(playing){
-      videoRef.current?.pause()
+      videoRef?.current?.pause()
       setPlaying(false)
     } else{
-      videoRef.current?.play()
+      videoRef?.current?.play()
       setPlaying(true)
     }
   }
@@ -65,7 +65,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
           className="rounded-3xl">
-          <Link href="/">
+          <Link href={`/detail/${post._id}`}>
             <video
               loop
               ref={videoRef}
